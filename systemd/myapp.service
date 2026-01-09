@@ -1,0 +1,12 @@
+[Unit]
+Description=Node.js Application Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/node /home/ubuntu/myapp/app.js
+Restart=always
+User=ubuntu
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
